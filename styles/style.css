@@ -81,6 +81,7 @@ input[type="text"] {
 
 .arena-right {
   border-radius: 0 80% 80% 0;
+  border-left: none;
 }
 
 .wrestler-left,.wrestler-right {
