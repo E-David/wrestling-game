@@ -133,10 +133,10 @@ syncWrestlersState()
 
 var winnerTauntNode = document.querySelector(".winner-taunt")
 var checkWinCondition = function(leftPosition,rightPosition) {
-  if (rightPosition >= 225) {
+  if (rightPosition >= 200) {
     console.log("leftWrestlerWins!")
     winnerTauntNode.innerHTML = wrestlers[0].taunt()
-  } else if (leftPosition >= 225) {
+  } else if (leftPosition >= 200) {
     console.log("rightWrestlerWins!")
     winnerTauntNode.innerHTML = wrestlers[1].taunt()
   } else {
