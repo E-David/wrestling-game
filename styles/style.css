@@ -1,0 +1,150 @@
+* {
+  font-size: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+}
+
+.wrestler-left-name, .wrestler-right-name, .winner-taunt {
+  position: absolute;
+  font-size: 72px;
+  width: 48%;
+  margin: 5px;
+  padding: 5px 10px;
+}
+
+.wrestler-left-name {
+  text-align: left;
+}
+
+.wrestler-right-name {
+  text-align: right;
+  right: 0;
+}
+
+.winner-taunt {
+  width: 100%;
+  font-size: 60px;
+  text-align: center;
+  display: none;
+}
+
+input[type="text"] {
+  font-size: 24px;
+  position: absolute;
+  max-width: 300px;
+  top: -50px;
+  margin: 0 auto;
+  border: 2px solid #555;
+}
+
+.arena-left input[type="text"] {
+  left: -4px;
+}
+
+.arena-right input[type="text"] {
+  right: -4px;
+}
+
+
+.full-arena {
+  position: absolute;
+  width: 604px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.full-arena img {
+  max-width: 100%;
+  border-radius: 80%;
+}
+
+.arena-left, .arena-right {
+  display: inline-block;
+  border: 2px solid black;
+  border-radius: 60%;
+  width: 300px;
+  height: 300px;
+  position: relative;
+  z-index: -1;
+}
+
+.arena-left {
+  border-radius: 80% 0 0 80%; 
+  border-right: none;
+}
+
+.arena-right {
+  border-radius: 0 80% 80% 0;
+}
+
+.wrestler-left,.wrestler-right {
+  width: 100px;
+  height: 100px;
+  border-radius: 80%;
+  position: absolute;
+  transition: all 1s ease;
+  z-index: 1;
+  /*fix this margin. Only done because borders are throwing boxes off from being together */
+  margin: -1px;
+}
+
+.wrestler-left {
+  top: 33.333%;
+}
+
+.wrestler-right {
+  top: 33.333%;
+}
+
+.start-match-button, .reset-button, .next-round-button{
+  position: absolute;
+  width: 200px;
+  height: 100px;
+  border: 2px solid black;
+  bottom: -10;
+  font-size: 36px;
+}
+
+.start-match-button {
+  left: 33.3333%;
+}
+
+.next-round-button {
+  right: -2px;
+}
+
+.reset-button {
+  left: -2px;
+}
+
+.next-round-button, .reset-button {
+  display: none;
+}
+
+.start-match-button p, .reset-button p, .next-round-button p {
+  text-align: center;
+  margin: 0;
+}
+
+.reset-button p, .start-match-button p {
+  font-size: 2em;
+}
+
+.next-round-button p {
+  font-size: 1.2em;
+}
+
+@media(max-width: 930px) {
+  .wrestler-left-name,.wrestler-right-name {
+    font-size: 60px;
+  }
+  .winner-taunt {
+    font-size: 48px;
+  }
+}
